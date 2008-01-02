@@ -9,6 +9,7 @@ Release:	%{release}
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://safecopy.sourceforge.net
 Group:		File tools
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPL
 
 %description
