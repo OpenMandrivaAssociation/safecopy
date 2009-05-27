@@ -1,16 +1,16 @@
-%define	version 0.2
-%define rel	2
+%define	version 1.3
+%define rel	1
 %define	release	%mkrel %rel
 
 Name:		safecopy
 Summary:	A data recovery tool
 Version:	%{version} 
 Release:	%{release} 
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://safecopy.sourceforge.net
 Group:		File tools
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-License:	GPL
+License:	GPLv2+
 
 %description
 safecopy is a data recovery tool which tries to extract as much data a
@@ -26,15 +26,15 @@ would fail due to I/O errors.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-install -m755 src/safecopy -D $RPM_BUILD_ROOT%{_bindir}/safecopy
+rm -rf %{buildroot}
+%makeinstall
 
 %clean 
-rm -rf $RPM_BUILD_ROOT 
+rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
 %doc README AUTHORS ChangeLog NEWS
 %{_bindir}/*
-
+%{_mandir}/man1/*
 
