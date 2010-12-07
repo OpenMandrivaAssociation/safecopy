@@ -1,5 +1,5 @@
 %define	version 1.6
-%define rel	1
+%define rel	2
 %define	release	%mkrel %rel
 
 Name:		safecopy
