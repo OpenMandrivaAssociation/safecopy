@@ -1,5 +1,5 @@
-%define	version 1.6
-%define rel	2
+%define	version 1.7
+%define rel	1
 %define	release	%mkrel %rel
 
 Name:		safecopy
@@ -9,7 +9,6 @@ Release:	%{release}
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://safecopy.sourceforge.net
 Group:		File tools
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPLv2+
 
 %description
@@ -26,15 +25,9 @@ would fail due to I/O errors.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall
 
-%clean 
-rm -rf %{buildroot}
-
 %files 
-%defattr(-,root,root)
 %doc README AUTHORS ChangeLog NEWS
 %{_bindir}/*
 %{_mandir}/man1/*
-
