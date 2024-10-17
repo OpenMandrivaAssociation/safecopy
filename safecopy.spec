@@ -7,7 +7,7 @@ Summary:	A data recovery tool
 Version:	%{version} 
 Release:	%{release} 
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-URL:		http://safecopy.sourceforge.net
+URL:		https://safecopy.sourceforge.net
 Group:		File tools
 License:	GPLv2+
 
