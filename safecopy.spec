@@ -11,6 +11,11 @@ URL:		https://safecopy.sourceforge.net
 Group:		File tools
 License:	GPLv2+
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 safecopy is a data recovery tool which tries to extract as much data a
 possible from a seekable but problematic (i.e., damaged sectors) source like
