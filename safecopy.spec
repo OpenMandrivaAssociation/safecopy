@@ -1,6 +1,6 @@
 %define	version 1.7
 %define rel	1
-%define	release	%mkrel %rel
+%define	release %rel.1
 
 Name:		safecopy
 Summary:	A data recovery tool
